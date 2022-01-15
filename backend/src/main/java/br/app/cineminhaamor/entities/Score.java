@@ -14,15 +14,15 @@ import javax.persistence.Table;
 public class Score {
 
     @EmbeddedId
-    ScorePK scorePK = new ScorePK();
+    ScorePK id = new ScorePK();
 
     private Double value ;
 
     public void setMovie(Movie movie){
-      this.scorePK.setMovie(movie);
+      this.id.setMovie(movie);
     }
 
     public void setUser(User user){
-     this.scorePK.setUser(user);
+     this.id.setUser(user);
     }
 }

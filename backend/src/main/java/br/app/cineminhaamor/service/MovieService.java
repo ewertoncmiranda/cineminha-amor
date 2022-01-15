@@ -17,14 +17,10 @@ public class MovieService {
     @Autowired
     private MovieRepository repository;
 
-
-
+    @Transactional(readOnly = true)
     public MovieDTO findById (Long id){
-
         Movie movie = repository.findById(id).get();
         return new MovieDTO(movie);
-
-
     }
 
     @Transactional(readOnly = true)
