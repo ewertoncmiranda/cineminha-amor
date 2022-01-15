@@ -1,10 +1,23 @@
-import Pagination from "components/Navbar/Pagination";
+import MovieCard from "components/MovieCard";
+import Pagination from "components/Pagination";
 
-function Listing(){
+function Listing() {
+  return (
+    <>
+      <Pagination />
 
-    return(
-        <Pagination/>
-    );
+      <div className="container">
+        <div className="row">
+          <div className="col-sm-6">
+            <MovieCard />
+          </div>
+          <div className="col-sm-6">
+            <MovieCard />
+          </div>
+        </div>
+      </div>
+    </>
+  );
 }
 
-export default Listing ;
+export default Listing;
